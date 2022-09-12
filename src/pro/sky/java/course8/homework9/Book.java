@@ -20,9 +20,6 @@ public class Book {
     public Author getAuthor() {
         return author;
     }
-    public String getAuthorName (Book book) {
-        return book.getAuthor().getNameAuthor() + " " + book.getAuthor().getSurnameAuthor();
-    }
 
     public int getYearOfPublication() {
         return yearOfPublication;
@@ -31,10 +28,6 @@ public class Book {
     public void setYearOfPublication(int yearOfPublication) {
         this.yearOfPublication = yearOfPublication;
     }
-
-   // public String toStringBook() {
-    //    return nameBook + ", " + yearOfPublication + ".";
-   // }
 
     @Override
     public boolean equals(Object o) {
@@ -51,10 +44,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "nameBook='" + nameBook + '\'' +
-                ", author=" + getAuthor().getNameAuthor() + " " + getAuthor().getSurnameAuthor() +
-                ", yearOfPublication=" + yearOfPublication +
-                '}';
+        return "Имя книги " + nameBook + ". Автор " + getAuthor().getNameAuthor() + " " + getAuthor().getSurnameAuthor() + ". " + yearOfPublication;
     }
 }
